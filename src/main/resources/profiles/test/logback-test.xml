@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="LOG_PATTERN" value="%d{HH:mm:ss.SSS} %level ${PID} [%thread] %logger{0} %msg%n"/>
+    <property name="LOG_PATTERN" value="%d{HH:mm:ss.SSS} %level ${PID} [%thread] [%logger{0}] %msg%n"/>
     <property name="LOG_SYSTEM" value="${LOG_PATH}/log/system"/>
     <property name="LOG_SYSTEM_WARN" value="${LOG_PATH}/log/system_warn"/>
     <appender name="STDOUT_SYSTEM" class="ch.qos.logback.core.ConsoleAppender">
@@ -12,6 +12,8 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>${LOG_SYSTEM}/%d{yyyy/MM/dd, aux}/system.%d{yyyy-MM-dd}_%i.log.gz</fileNamePattern>
             <maxFileSize>100MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+            <totalSizeCap>5GB</totalSizeCap>
         </rollingPolicy>
         <encoder>
             <pattern>${LOG_PATTERN}</pattern>
@@ -21,6 +23,8 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>${LOG_SYSTEM_WARN}/%d{yyyy/MM/dd, aux}/system.%d{yyyy-MM-dd}_%i.log.gz</fileNamePattern>
             <maxFileSize>100MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+            <totalSizeCap>5GB</totalSizeCap>
         </rollingPolicy>
         <encoder>
             <pattern>${LOG_PATTERN}</pattern>
