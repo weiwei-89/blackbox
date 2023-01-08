@@ -5,26 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70160c98-8fbd-4dae-a1d2-ddd358cd2146" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/config/SystemConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/config/TcpServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/SystemConfigRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/TcpServerRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/FrameDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/IOLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/InputLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/OutputLogger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/util/ByteBufUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/TcpServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/handler/DataDecryptHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/util/DataUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/config/ProtocolConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/ProtocolServiceRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/CachedFrameDecoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/config/SystemConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/config/SystemConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/SystemConfigRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/SystemConfigRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/FrameDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/FrameDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/IOLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/IOLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/InputLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/InputLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/OutputLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/OutputLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/TcpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/TcpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/handler/DataDecryptHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/handler/DataDecryptHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/util/DataUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/dev/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/dev/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/dev/logback-dev.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/dev/logback-dev.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/prod/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/prod/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/prod/logback-prod.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/prod/logback-prod.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/test/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/test/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/test/logback-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/test/logback-test.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,20 +88,7 @@
       <recent name="D:\edward\develop\blackbox\src\main\resources\profiles\prod" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BlackboxApplication">
-    <configuration name="DataUtil" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.edward.blackbox.util.DataUtil" />
-      <module name="blackbox" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.edward.blackbox.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="BlackboxApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" />
       <module name="blackbox" />
@@ -127,7 +110,8 @@
       <workItem from="1671882391113" duration="12198000" />
       <workItem from="1672407653658" duration="4601000" />
       <workItem from="1672456598689" duration="25810000" />
-      <workItem from="1672926812508" duration="1062000" />
+      <workItem from="1672926812508" duration="3359000" />
+      <workItem from="1673100590420" duration="16330000" />
     </task>
     <task id="LOCAL-00001" summary="黑匣子">
       <created>1671882639433</created>
@@ -143,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671902122942</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加TCP服务端">
+      <created>1672928180055</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672928180055</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +154,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="黑匣子" />
     <MESSAGE value="添加SpringBoot依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加SpringBoot依赖" />
+    <MESSAGE value="添加TCP服务端" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加TCP服务端" />
   </component>
 </project>

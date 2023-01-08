@@ -5,7 +5,7 @@ import io.netty.channel.ChannelDuplexHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPromise;
 import org.edward.blackbox.tcp.netty.util.ByteBufUtil;
-import org.edward.blackbox.util.DataUtil;
+import org.edward.turbosnail.util.DataUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

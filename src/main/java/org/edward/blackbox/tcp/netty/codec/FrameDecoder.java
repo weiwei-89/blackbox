@@ -29,41 +29,40 @@ public class FrameDecoder extends ByteToMessageDecoder {
     }
 
     @Override
-    protected void decode(ChannelHandlerContext channelHandlerContext,
-                          ByteBuf byteBuf, List<Object> list) throws Exception {
+    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         if(this.length <= this.delimiter.length) {
             throw new Exception("the length of one frame must be greater than the length of delimiter");
         }
-        if(byteBuf.readableBytes() < this.length) {
+        if(in.readableBytes() < this.length) {
             return;
         }
         if(this.findDelimiter) {
             if(this.delimiterIndex > 0) {
-                byteBuf.skipBytes(this.delimiterIndex-byteBuf.readerIndex());
-                byteBuf.discardReadBytes();
+                in.skipBytes(this.delimiterIndex-in.readerIndex());
+                in.discardReadBytes();
                 this.delimiterIndex = 0;
             }
-            if(byteBuf.readableBytes() >= this.length) {
-                list.add(byteBuf.readRetainedSlice(this.length));
+            if(in.readableBytes() >= this.length) {
+                out.add(in.readRetainedSlice(this.length));
                 this.findDelimiter = false;
             }
         } else {
-            this.delimiterIndex = ByteBufUtil.searchDelimiterIndex(byteBuf, this.delimiter);
+            this.delimiterIndex = ByteBufUtil.searchDelimiterIndex(in, this.delimiter);
             if(this.delimiterIndex >= 0) {
                 this.findDelimiter = true;
                 if(this.delimiterIndex > 0) {
-                    byteBuf.skipBytes(this.delimiterIndex-byteBuf.readerIndex());
-                    byteBuf.discardReadBytes();
+                    in.skipBytes(this.delimiterIndex-in.readerIndex());
+                    in.discardReadBytes();
                     this.delimiterIndex = 0;
                 }
-                if(byteBuf.readableBytes() >= this.length) {
-                    list.add(byteBuf.readRetainedSlice(this.length));
+                if(in.readableBytes() >= this.length) {
+                    out.add(in.readRetainedSlice(this.length));
                     this.findDelimiter = false;
                 }
             } else {
                 this.findDelimiter = false;
-                byteBuf.skipBytes(byteBuf.readableBytes()-this.delimiter.length);
-                byteBuf.discardReadBytes();
+                in.skipBytes(in.readableBytes()-this.delimiter.length);
+                in.discardReadBytes();
             }
         }
     }

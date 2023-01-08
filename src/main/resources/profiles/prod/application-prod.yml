@@ -7,3 +7,7 @@ logging:
 tcp:
   server:
     port: 8090
+
+protocol:
+  id: gb-20230102
+  path: D:\edward\test\develop\turbosnail\protocol\gb-20230102

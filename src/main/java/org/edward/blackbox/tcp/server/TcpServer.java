@@ -9,6 +9,8 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.LineBasedFrameDecoder;
 import org.edward.blackbox.config.TcpServerConfig;
+import org.edward.blackbox.tcp.netty.codec.CachedFrameDecoder;
+import org.edward.blackbox.tcp.netty.codec.FrameDecoder;
 import org.edward.blackbox.tcp.server.handler.DataDecryptHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +38,9 @@ public class TcpServer {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel.pipeline()
-                                    .addLast(new LineBasedFrameDecoder(9))
+//                                    .addLast(new LineBasedFrameDecoder(9))
+//                                    .addLast(new CachedFrameDecoder(new byte[]{0x23}, 9))
+                                    .addLast(new FrameDecoder(new byte[]{0x23}, 9))
                                     .addLast(new DataDecryptHandler());
                         }
                     }).bind(this.tcpServerConfig.getPort()).sync().channel();

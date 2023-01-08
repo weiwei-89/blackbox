@@ -4,7 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.edward.blackbox.tcp.netty.util.ByteBufUtil;
-import org.edward.blackbox.util.DataUtil;
+import org.edward.turbosnail.util.DataUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
