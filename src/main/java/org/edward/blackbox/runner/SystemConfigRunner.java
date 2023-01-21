@@ -29,6 +29,6 @@ public class SystemConfigRunner implements ApplicationRunner {
         logger.info("loading system configurations......");
         SystemConfig.setTcpServerConfig(this.tcpServerConfig);
         SystemConfig.setProtocolConfig(this.protocolConfig);
-        logger.info("loading done");
+        logger.info("done");
     }
 }

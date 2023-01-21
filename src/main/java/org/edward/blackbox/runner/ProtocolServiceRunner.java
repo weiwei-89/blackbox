@@ -26,7 +26,7 @@ public class ProtocolServiceRunner implements ApplicationRunner {
         Map<String, Papers> papersMap = ProtocolLoader.load(new Path[]{new Path(SystemConfig
                 .getProtocolConfig().getPath(), SystemConfig.getProtocolConfig().getId())});
         papers = papersMap.get(SystemConfig.getProtocolConfig().getId());
-        logger.info("loading done");
+        logger.info("done");
     }
 
     public static Papers getPapers() {

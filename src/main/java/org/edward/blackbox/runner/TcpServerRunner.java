@@ -33,10 +33,10 @@ public class TcpServerRunner implements ApplicationRunner {
             @Override
             public void run() {
                 try {
-                    logger.info("starting up tcp server@{}......", SystemConfig.getTcpServerConfig().getPort());
+                    logger.info("starting up tcp server[port:{}]......", SystemConfig.getTcpServerConfig().getPort());
                     new TcpServer(SystemConfig.getTcpServerConfig()).startup();
                 } catch(Exception e) {
-                    logger.error("tcp server goes wrong", e);
+                    logger.error("tcp server goes wrong[port:"+SystemConfig.getTcpServerConfig().getPort()+"]", e);
                 }
             }
         });

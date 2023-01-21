@@ -34,9 +34,7 @@ public class DataDecryptHandler extends ChannelInboundHandlerAdapter {
         try {
             if(msg instanceof ByteBuf) {
                 ByteBuf data = (ByteBuf) msg;
-                byte[] bytes = ByteBufUtil.getBytes(data);
-                logger.info("hex:{}", DataUtil.toHexString(bytes));
-                Info info = this.protocolDecoder.decode(bytes);
+                Info info = this.protocolDecoder.decode(ByteBufUtil.getBytes(data));
                 logger.info("info:{}", JSON.toJSONString(info));
             }
         } finally {

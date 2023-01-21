@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70160c98-8fbd-4dae-a1d2-ddd358cd2146" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/config/ProtocolConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/ProtocolServiceRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/CachedFrameDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/AppendEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/HeartbeatHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/config/SystemConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/config/SystemConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/ProtocolServiceRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/ProtocolServiceRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/SystemConfigRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/SystemConfigRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/FrameDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/FrameDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/IOLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/IOLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/InputLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/InputLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/OutputLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/netty/codec/OutputLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/TcpServerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/runner/TcpServerRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/TcpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/TcpServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/handler/DataDecryptHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/tcp/server/handler/DataDecryptHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/edward/blackbox/util/DataUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/dev/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/dev/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/prod/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/prod/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/profiles/test/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/profiles/test/application-test.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +103,9 @@
       <workItem from="1672407653658" duration="4601000" />
       <workItem from="1672456598689" duration="25810000" />
       <workItem from="1672926812508" duration="3359000" />
-      <workItem from="1673100590420" duration="16330000" />
+      <workItem from="1673100590420" duration="16637000" />
+      <workItem from="1673445465771" duration="5201000" />
+      <workItem from="1673533528601" duration="7925000" />
     </task>
     <task id="LOCAL-00001" summary="黑匣子">
       <created>1671882639433</created>
@@ -134,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672928180055</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加协议处理组件">
+      <created>1673193031972</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673193031972</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +156,7 @@
     <MESSAGE value="黑匣子" />
     <MESSAGE value="添加SpringBoot依赖" />
     <MESSAGE value="添加TCP服务端" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加TCP服务端" />
+    <MESSAGE value="添加协议处理组件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加协议处理组件" />
   </component>
 </project>
